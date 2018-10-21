@@ -1,10 +1,10 @@
 
 products = []
 while True: # 当不知道要循环几次是，通常都选 while loop
-	name = input('请输入商品名称：')
+	name = input('名称：')
 	if name == 'q':  
 		break
-	price = input('请输入商品价格：')
+	price = input('价格：')
 	#p = []
 	#p.append(name)
 	#p.append(price)
@@ -14,12 +14,12 @@ while True: # 当不知道要循环几次是，通常都选 while loop
 	products.append([name, price])
 print(products)
 
-# 请输入商品名称：coffe
-# 请输入商品价格：£3   
-# 请输入商品名称：ramen
-# 请输入商品价格：£1.60
-# 请输入商品名称：q
-# [['coffe', '£3'], ['ramen', '£1.60']]
+for p in products:
+	print(p[0], '的价格是：', p[1])
+	
+
+# 运行结果：
+
 
 
 
