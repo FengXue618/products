@@ -5,20 +5,21 @@ while True: # 当不知道要循环几次是，通常都选 while loop
 	if name == 'q':  
 		break
 	price = input('价格：')
-	#p = []
-	#p.append(name)
-	#p.append(price)
-
-	# p = [name, price]   # 12, 可以取代8,9,10这三行
-	# products.append(p)
-	products.append([name, price])
+	price = int(price)    # 型别转换提点  
+	data = input('日期📅：')
+	products.append([name, price, data])
 print(products)
 
 for p in products:
-	print(p[0], '的价格是：', p[1])
-	
+	print(p[0], '的价格是：', p[1], '日期📅：', p[2])
 
-# 运行结果：
+
+	
+with open('products.csv', 'w', encoding='utf-8') as f:
+	f.write('商品,价格,日期\n')
+	for p in products:
+		f.write(p[0] + ',' + str(p[1]) + ',' + p[2] + '\n')
+
 
 
 
